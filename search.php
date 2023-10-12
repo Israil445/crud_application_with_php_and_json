@@ -12,10 +12,16 @@ if (isset($_POST['search'])) {
     $option = 'title'; //$_POST['search_by'];
 
     foreach ($books as $key => $obj) :
+        $cnt = 0;
         foreach ($obj as $key1 => $obj1) :
-            if (strpos(strtoupper($obj1), strtoupper($search_key)) !== false) {
+            $cnt++;
+            // if (strpos(strtoupper($obj1), strtoupper($search_key)) !== false) {
+            //     array_push($entries, $books[$key]);
+            //     break; // add one entry for one list
+            // }
+            if ($obj1 === $search_key && $cnt === 1) {
                 array_push($entries, $books[$key]);
-                break; // add one entry for one list
+                break; 
             }
         endforeach;
     endforeach;
