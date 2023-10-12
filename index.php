@@ -21,17 +21,16 @@
 
 <nav class="sticky-top navbar navbar-light navbar-style bg-light">
     <div class="container-fluid">
-        <a href="index.php" class="text-dark" style="font-size: 30px;"><b>Book Shelf</b></a>
+        <a href="index.php" class="text-dark" style="font-size: 30px;"><b>Book Libary</b></a>
         <a class="add-entry" href="<?php echo 'create.php' ?>">
-            <button class="btn btn-success">Add Entry</button>
+            <button class="btn btn-success">Add Book</button>
         </a>
         <form class="d-flex" action="search.php" method="POST">
-            <input class="form-control me-2" type="search" name="search" placeholder="Search anything" aria-label="Search">
+            <input class="form-control me-2" type="search" name="search" placeholder="Search a Book" aria-label="Search">
             <button class="btn btn-primary btn-sm" type="submit">Search</button>
         </form>
     </div>
 </nav>
-
 
 
     <div class="table-container">
